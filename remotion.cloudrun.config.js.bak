@@ -1,0 +1,14 @@
+const { defineCloudRunConfig } = require("@remotion/cloudrun");
+
+exports.config = defineCloudRunConfig({
+  projectId: "remotion-video-generator-prod",
+  region: "us-east1",
+
+  memory: "2Gi",
+  cpu: 1,
+
+  timeoutInSeconds: 300,
+
+  minInstances: 0,
+  maxInstances: 5,
+});
